@@ -1,6 +1,6 @@
 # Study Progress
 
-51 subtopics in 17 topics, 255 problems. No Hards yet. Problems come from NeetCode 250 / LeetCode; numbers were written from memory and are verified by web search when each subtopic is started (see PROTOCOL.md, step 0). Until then, if a number and title disagree, trust the title.
+53 subtopics in 17 topics, 265 problems. No Hards yet. Problems come from NeetCode 250 / LeetCode; numbers were written from memory and are verified by web search when each subtopic is started (see PROTOCOL.md, step 0). Until then, if a number and title disagree, trust the title.
 
 **Legend:** Status is one of `Not started`, `In progress`, `Completed`. (E) = Easy, (M) = Medium. Process: see [PROTOCOL.md](PROTOCOL.md).
 
@@ -8,7 +8,7 @@
 
 ---
 
-## 1. Arrays & Hashing
+## 1. Arrays, Strings & Hashing
 
 README section: Data Structures > Arrays, Hash table
 
@@ -16,15 +16,17 @@ README section: Data Structures > Arrays, Hash table
 
 Checkpoint problems: _chosen when every subtopic below is Completed_
 
-### 1.1 Duplicates & membership
+### 1.1 Array basics
 
 **Status:** Not started
 
-- [ ] 217. Contains Duplicate (E)
-- [ ] 242. Valid Anagram (E)
-- [ ] 1. Two Sum (E)
-- [ ] 349. Intersection of Two Arrays (E)
-- [ ] 202. Happy Number (E)
+Problems verified by search: yes
+
+- [ ] 1480. Running Sum of 1d Array (E)
+- [ ] 1672. Richest Customer Wealth (E)
+- [ ] 485. Max Consecutive Ones (E)
+- [ ] 1295. Find Numbers with Even Number of Digits (E)
+- [ ] 414. Third Maximum Number (E)
 
 - [ ] Verbal quiz done
 - Weak spots: _none logged_
@@ -46,16 +48,42 @@ Checkpoint problems: _chosen when every subtopic below is Completed_
 
 **Status:** Not started
 
-- [ ] 28. Find the Index of the First Occurrence in a String (E)
+- [ ] 709. To Lower Case (E)
 - [ ] 58. Length of Last Word (E)
+- [ ] 28. Find the Index of the First Occurrence in a String (E)
 - [ ] 459. Repeated Substring Pattern (E)
+- [ ] 520. Detect Capital (E)
+
+- [ ] Verbal quiz done
+- Weak spots: _none logged_
+
+### 1.4 String parsing & conversion
+
+**Status:** Not started
+
+- [ ] 929. Unique Email Addresses (E)
+- [ ] 165. Compare Version Numbers (M)
 - [ ] 8. String to Integer (atoi) (M)
+- [ ] 38. Count and Say (M)
 - [ ] 6. Zigzag Conversion (M)
 
 - [ ] Verbal quiz done
 - Weak spots: _none logged_
 
-### 1.4 Frequency counting
+### 1.5 Duplicates & membership
+
+**Status:** Not started
+
+- [ ] 217. Contains Duplicate (E)
+- [ ] 242. Valid Anagram (E)
+- [ ] 1. Two Sum (E)
+- [ ] 349. Intersection of Two Arrays (E)
+- [ ] 202. Happy Number (E)
+
+- [ ] Verbal quiz done
+- Weak spots: _none logged_
+
+### 1.6 Frequency counting
 
 **Status:** Not started
 
@@ -68,11 +96,11 @@ Checkpoint problems: _chosen when every subtopic below is Completed_
 - [ ] Verbal quiz done
 - Weak spots: _none logged_
 
-### 1.5 Prefix sums & subarrays
+### 1.7 Prefix sums & subarrays
 
 **Status:** Not started
 
-- [ ] 1480. Running Sum of 1d Array (E)
+- [ ] 303. Range Sum Query - Immutable (E)
 - [ ] 724. Find Pivot Index (E)
 - [ ] 238. Product of Array Except Self (M)
 - [ ] 560. Subarray Sum Equals K (M)
@@ -81,7 +109,7 @@ Checkpoint problems: _chosen when every subtopic below is Completed_
 - [ ] Verbal quiz done
 - Weak spots: _none logged_
 
-### 1.6 Matrices
+### 1.8 Matrices
 
 **Status:** Not started
 
