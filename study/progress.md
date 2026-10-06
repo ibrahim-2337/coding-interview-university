@@ -1,6 +1,6 @@
 # Study Progress
 
-51 subtopics in 17 topics, 255 problems. No Hards yet. Problems come from NeetCode 250 / LeetCode; numbers were written from memory, so if a number and title disagree, trust the title.
+51 subtopics in 17 topics, 255 problems. No Hards yet. Problems come from NeetCode 250 / LeetCode; numbers were written from memory and are verified by web search when each subtopic is started (see PROTOCOL.md, step 0). Until then, if a number and title disagree, trust the title.
 
 **Legend:** Status is one of `Not started`, `In progress`, `Completed`. (E) = Easy, (M) = Medium. Process: see [PROTOCOL.md](PROTOCOL.md).
 

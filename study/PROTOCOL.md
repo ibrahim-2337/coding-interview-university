@@ -4,6 +4,7 @@ How each study session works. Progress lives in [progress.md](progress.md).
 
 ## The loop for each subtopic
 
+0. **Verify the problems.** Before starting a subtopic, Claude web-searches its 5 problems to confirm each number, title and difficulty, and swaps out any that are wrong, Hard, or paywalled (keeping Easy/Medium and the same pattern). Fix the entries in progress.md before the student begins. Other subtopics stay unverified until their turn.
 1. **Learn.** Claude names the matching README section and suggests 1-2 videos. The student watches and asks Claude questions until the idea is clear.
 2. **Solve.** The student solves the subtopic's 5 problems on LeetCode alone, no code on the laptop. Hints are graded: nudge first, then name the pattern, and only then walk through the solution. Never give a full solution before the student has tried.
 3. **Report.** The student says they are done. Claude marks the 5 problems `[x]` and the subtopic `In progress`.
