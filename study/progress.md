@@ -18,15 +18,15 @@ Checkpoint problems: _chosen when every subtopic below is Completed_
 
 ### 1.1 Array basics
 
-**Status:** Not started
+**Status:** In progress
 
 Problems verified by search: yes
 
-- [ ] 1480. Running Sum of 1d Array (E)
-- [ ] 1672. Richest Customer Wealth (E)
-- [ ] 485. Max Consecutive Ones (E)
-- [ ] 1295. Find Numbers with Even Number of Digits (E)
-- [ ] 414. Third Maximum Number (E)
+- [x] 1480. Running Sum of 1d Array (E)
+- [x] 1672. Richest Customer Wealth (E)
+- [x] 485. Max Consecutive Ones (E)
+- [x] 1295. Find Numbers with Even Number of Digits (E)
+- [x] 414. Third Maximum Number (E)
 
 - [ ] Verbal quiz done
 - Weak spots: _none logged_
@@ -34,6 +34,8 @@ Problems verified by search: yes
 ### 1.2 In-place array operations
 
 **Status:** Not started
+
+Problems verified by search: yes
 
 - [ ] 26. Remove Duplicates from Sorted Array (E)
 - [ ] 27. Remove Element (E)
