@@ -37,7 +37,7 @@ Extra problems (added at the student's request after the first five):
 - [ ] 1389. Create Target Array in the Given Order (E)
 
 - [ ] Verbal quiz done
-- Weak spots: cost of inserting at the front of an array (said O(1); it is O(n) because every element shifts). Dynamic-array resizing (said 32->64 bit; it is the capacity growing, e.g. doubling, with an O(n) copy). Quiz problems 4-5 (second smallest distinct; row with most 1s) skipped at student's request.
+- Weak spots: cost of inserting at the front of an array (said O(1); it is O(n) because every element shifts). Dynamic-array resizing: right idea (occasional O(n) copy to a bigger array), but thinks of growth as jumping between bit-width sizes (2^32 -> 2^64); in reality capacity starts small and doubles (16, 32, 64...), which is why append is amortized O(1). Quiz problems 4-5 (second smallest distinct; row with most 1s) skipped at student's request.
 
 ### 1.2 In-place array operations
 
