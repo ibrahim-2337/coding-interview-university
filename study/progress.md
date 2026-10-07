@@ -41,6 +41,9 @@ Extra problems (added at the student's request; the first extra lists were scrap
 - [ ] 1769. Minimum Number of Operations to Move All Balls to Each Box (M)
 - [ ] 1894. Find the Student that Will Replace the Chalk (M)
 - [ ] 2079. Watering Plants (M)
+- [ ] 2105. Watering Plants II (M, difficulty not confirmed by search)
+- [ ] 1007. Minimum Domino Rotations For Equal Row (M)
+- [ ] 31. Next Permutation (M)
 
 - [ ] Verbal quiz done
 - Weak spots: cost of inserting at the front of an array (said O(1); it is O(n) because every element shifts). Dynamic-array resizing: right idea (occasional O(n) copy to a bigger array), but thinks of growth as jumping between bit-width sizes (2^32 -> 2^64); in reality capacity starts small and doubles (16, 32, 64...), which is why append is amortized O(1). Quiz problems 4-5 (second smallest distinct; row with most 1s) skipped at student's request.
