@@ -36,6 +36,14 @@ Extra problems (added at the student's request after the first five):
 - [ ] 896. Monotonic Array (E)
 - [ ] 1389. Create Target Array in the Given Order (E)
 
+Second extra set (added at the student's request):
+
+- [ ] 1822. Sign of the Product of an Array (E)
+- [ ] 1913. Maximum Product Difference Between Two Pairs (E)
+- [ ] 2574. Left and Right Sum Differences (E)
+- [ ] 941. Valid Mountain Array (E)
+- [ ] 1304. Find N Unique Integers Sum up to Zero (E)
+
 - [ ] Verbal quiz done
 - Weak spots: cost of inserting at the front of an array (said O(1); it is O(n) because every element shifts). Dynamic-array resizing: right idea (occasional O(n) copy to a bigger array), but thinks of growth as jumping between bit-width sizes (2^32 -> 2^64); in reality capacity starts small and doubles (16, 32, 64...), which is why append is amortized O(1). Quiz problems 4-5 (second smallest distinct; row with most 1s) skipped at student's request.
 
