@@ -28,8 +28,16 @@ Problems verified by search: yes
 - [x] 1295. Find Numbers with Even Number of Digits (E)
 - [x] 414. Third Maximum Number (E)
 
+Extra problems (added at the student's request after the first five):
+
+- [ ] 1929. Concatenation of Array (E)
+- [ ] 1470. Shuffle the Array (E)
+- [ ] 1431. Kids With the Greatest Number of Candies (E)
+- [ ] 896. Monotonic Array (E)
+- [ ] 1389. Create Target Array in the Given Order (E)
+
 - [ ] Verbal quiz done
-- Weak spots: _none logged_
+- Weak spots: cost of inserting at the front of an array (said O(1); it is O(n) because every element shifts). Dynamic-array resizing (said 32->64 bit; it is the capacity growing, e.g. doubling, with an O(n) copy). Quiz problems 4-5 (second smallest distinct; row with most 1s) skipped at student's request.
 
 ### 1.2 In-place array operations
 
