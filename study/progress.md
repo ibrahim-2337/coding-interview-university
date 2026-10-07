@@ -35,6 +35,9 @@ Extra problems (added at the student's request; the first extra lists were scrap
 - [ ] 896. Monotonic Array (E)
 - [ ] 1389. Create Target Array in the Given Order (E)
 - [ ] 2149. Rearrange Array Elements by Sign (M)
+- [ ] 2161. Partition Array According to Given Pivot (M)
+- [ ] 665. Non-decreasing Array (M)
+- [ ] 1535. Find the Winner of an Array Game (M, difficulty not confirmed by search)
 
 - [ ] Verbal quiz done
 - Weak spots: cost of inserting at the front of an array (said O(1); it is O(n) because every element shifts). Dynamic-array resizing: right idea (occasional O(n) copy to a bigger array), but thinks of growth as jumping between bit-width sizes (2^32 -> 2^64); in reality capacity starts small and doubles (16, 32, 64...), which is why append is amortized O(1). Quiz problems 4-5 (second smallest distinct; row with most 1s) skipped at student's request.
