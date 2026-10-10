@@ -36,17 +36,17 @@ Extra problems (added at the student's request; the first extra lists were scrap
 - [x] 1389. Create Target Array in the Given Order (E)
 - [x] 2149. Rearrange Array Elements by Sign (M)
 - [x] 2161. Partition Array According to Given Pivot (M)
-- [ ] 665. Non-decreasing Array (M)
-- [ ] 1535. Find the Winner of an Array Game (M, difficulty not confirmed by search)
-- [ ] 1769. Minimum Number of Operations to Move All Balls to Each Box (M)
-- [ ] 1894. Find the Student that Will Replace the Chalk (M)
-- [ ] 2079. Watering Plants (M)
-- [ ] 2105. Watering Plants II (M, difficulty not confirmed by search)
-- [ ] 1007. Minimum Domino Rotations For Equal Row (M)
-- [ ] 31. Next Permutation (M)
+- [x] 665. Non-decreasing Array (M)
+- [x] 1535. Find the Winner of an Array Game (M, difficulty not confirmed by search)
+- [x] 1769. Minimum Number of Operations to Move All Balls to Each Box (M)
+- [x] 1894. Find the Student that Will Replace the Chalk (M)
+- [x] 2079. Watering Plants (M)
+- [x] 2105. Watering Plants II (M, difficulty not confirmed by search)
+- [x] 1007. Minimum Domino Rotations For Equal Row (M)
+- [x] 31. Next Permutation (M)
 
 - [x] Verbal quiz done
-- Weak spots: front-insert cost and dynamic-array resizing both answered correctly on recall in session 2 (1 of 2 needed to clear). Quiz problems 4-5 and the 2161 complexity question skipped at student's request. Optional Mediums not yet ticked: 665, 1535, 1769, 1894, 2079, 2105, 1007, 31.
+- Weak spots: front-insert cost and dynamic-array resizing both answered correctly on recall in session 2 (1 of 2 needed to clear). Quiz problems 4-5 and the 2161 complexity question skipped at student's request.
 
 ### 1.2 In-place array operations
 
