@@ -4,7 +4,7 @@
 
 **Legend:** Status is one of `Not started`, `In progress`, `Completed`. (E) = Easy, (M) = Medium. Process: see [PROTOCOL.md](PROTOCOL.md).
 
-**Current subtopic:** 1.1
+**Current subtopic:** 1.2
 
 ---
 
@@ -18,7 +18,7 @@ Checkpoint problems: _chosen when every subtopic below is Completed_
 
 ### 1.1 Array basics
 
-**Status:** In progress
+**Status:** Completed
 
 Problems verified by search: yes
 
@@ -30,11 +30,11 @@ Problems verified by search: yes
 
 Extra problems (added at the student's request; the first extra lists were scrapped, none were attempted):
 
-- [ ] 1470. Shuffle the Array (E)
-- [ ] 1431. Kids With the Greatest Number of Candies (E)
-- [ ] 896. Monotonic Array (E)
-- [ ] 1389. Create Target Array in the Given Order (E)
-- [ ] 2149. Rearrange Array Elements by Sign (M)
+- [x] 1470. Shuffle the Array (E)
+- [x] 1431. Kids With the Greatest Number of Candies (E)
+- [x] 896. Monotonic Array (E)
+- [x] 1389. Create Target Array in the Given Order (E)
+- [x] 2149. Rearrange Array Elements by Sign (M)
 - [x] 2161. Partition Array According to Given Pivot (M)
 - [ ] 665. Non-decreasing Array (M)
 - [ ] 1535. Find the Winner of an Array Game (M, difficulty not confirmed by search)
@@ -45,12 +45,12 @@ Extra problems (added at the student's request; the first extra lists were scrap
 - [ ] 1007. Minimum Domino Rotations For Equal Row (M)
 - [ ] 31. Next Permutation (M)
 
-- [ ] Verbal quiz done
-- Weak spots: cost of inserting at the front of an array (said O(1); it is O(n) because every element shifts). Dynamic-array resizing: right idea (occasional O(n) copy to a bigger array), but thinks of growth as jumping between bit-width sizes (2^32 -> 2^64); in reality capacity starts small and doubles (16, 32, 64...), which is why append is amortized O(1). Quiz problems 4-5 (second smallest distinct; row with most 1s) skipped at student's request.
+- [x] Verbal quiz done
+- Weak spots: front-insert cost and dynamic-array resizing both answered correctly on recall in session 2 (1 of 2 needed to clear). Quiz problems 4-5 and the 2161 complexity question skipped at student's request. Optional Mediums not yet ticked: 665, 1535, 1769, 1894, 2079, 2105, 1007, 31.
 
 ### 1.2 In-place array operations
 
-**Status:** Not started
+**Status:** In progress
 
 Problems verified by search: yes
 
