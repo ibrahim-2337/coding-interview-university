@@ -56,7 +56,7 @@ Problems verified by search: yes
 
 - [ ] 26. Remove Duplicates from Sorted Array (E)
 - [ ] 27. Remove Element (E)
-- [ ] 283. Move Zeroes (E)
+- [x] 283. Move Zeroes (E)
 - [ ] 88. Merge Sorted Array (E)
 - [ ] 189. Rotate Array (M)
 
