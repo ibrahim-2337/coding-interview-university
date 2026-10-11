@@ -65,7 +65,7 @@ Extra problems (added at the student's request):
 - [ ] 905. Sort Array By Parity (E)
 - [ ] 1089. Duplicate Zeros (E)
 - [ ] 2460. Apply Operations to an Array (E)
-- [ ] 1299. Replace Elements with Greatest Element on Right Side (E)
+- [x] 1299. Replace Elements with Greatest Element on Right Side (E)
 - [ ] 80. Remove Duplicates from Sorted Array II (M)
 
 - [ ] Verbal quiz done
