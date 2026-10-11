@@ -75,6 +75,8 @@ Extra problems (added at the student's request):
 
 **Status:** Not started
 
+Problems verified by search: yes (520 Detect Capital: difficulty not shown by search, believed Easy)
+
 - [ ] 709. To Lower Case (E)
 - [ ] 58. Length of Last Word (E)
 - [ ] 28. Find the Index of the First Occurrence in a String (E)
