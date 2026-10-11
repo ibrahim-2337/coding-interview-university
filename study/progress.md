@@ -54,11 +54,11 @@ Extra problems (added at the student's request; the first extra lists were scrap
 
 Problems verified by search: yes
 
-- [ ] 26. Remove Duplicates from Sorted Array (E)
-- [ ] 27. Remove Element (E)
+- [x] 26. Remove Duplicates from Sorted Array (E)
+- [x] 27. Remove Element (E)
 - [x] 283. Move Zeroes (E)
-- [ ] 88. Merge Sorted Array (E)
-- [ ] 189. Rotate Array (M)
+- [x] 88. Merge Sorted Array (E)
+- [x] 189. Rotate Array (M)
 
 - [ ] Verbal quiz done
 - Weak spots: _none logged_
