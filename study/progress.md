@@ -60,8 +60,16 @@ Problems verified by search: yes
 - [x] 88. Merge Sorted Array (E)
 - [x] 189. Rotate Array (M)
 
+Extra problems (added at the student's request):
+
+- [ ] 905. Sort Array By Parity (E)
+- [ ] 1089. Duplicate Zeros (E)
+- [ ] 2460. Apply Operations to an Array (E)
+- [ ] 1299. Replace Elements with Greatest Element on Right Side (E)
+- [ ] 80. Remove Duplicates from Sorted Array II (M)
+
 - [ ] Verbal quiz done
-- Weak spots: _none logged_
+- Weak spots: _none logged_ (verbal quiz not yet done; student said they know the material and asked for five more problems instead)
 
 ### 1.3 String basics
 
