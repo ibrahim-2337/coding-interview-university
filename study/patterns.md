@@ -16,7 +16,6 @@ A living cheat sheet: one entry per pattern, with a recognition signal, the idea
 | reorder into groups, keep order within groups | Buckets, then concatenate |
 | merge into an array with free space at the end | Fill from the back |
 | rotate an array | Reverse three times |
-| duplicates, 'have I seen this', membership | Hash set (or map if you need a value) |
 
 ## Patterns
 
@@ -186,7 +185,7 @@ public:
 
 **Complexity:** O(n) time, O(1) extra space (modifies the input; ask first in an interview).
 
-**Also / watch out:** Range sum = `prefix[r] - prefix[l - 1]`. Later: Subarray Sum Equals K, Product of Array Except Self.
+**Also / watch out:** Range sum = `prefix[r] - prefix[l - 1]`.
 
 ### 5. Scan from the right with a running max
 
@@ -460,47 +459,6 @@ public:
 
 **Also / watch out:** Element at index i moves to `(i + k) % n` when rotating right.
 
-### 11. Hash set for 'have I seen this?'
-
-**Signal:** Duplicates, membership, 'does X exist' questions where order doesn't matter.
-
-**Idea:** For each element: if it is already in the set, answer immediately. Otherwise add it. Check before you add.
-
-**Sample:** LC 217 Contains Duplicate
-
-Python:
-
-```python
-class Solution:
-    def containsDuplicate(self, nums: list[int]) -> bool:
-        seen = set()
-        for x in nums:
-            if x in seen:
-                return True
-            seen.add(x)
-        return False
-```
-
-C++:
-
-```cpp
-class Solution {
-public:
-    bool containsDuplicate(vector<int>& nums) {
-        unordered_set<int> seen;
-        for (int x : nums) {
-            if (seen.count(x)) return true;
-            seen.insert(x);
-        }
-        return false;
-    }
-};
-```
-
-**Complexity:** O(n) time on average, O(n) space.
-
-**Also / watch out:** Use a hash map instead when you need a value per key (counts, indices): Two Sum, Valid Anagram.
-
 ## Cost cheat sheet: Python list vs C++ vector
 
 | Operation | Python `list` | C++ `vector` | Cost |
@@ -546,17 +504,6 @@ Why append is amortized O(1): the array doubles in capacity when full (16, 32, 6
 - Writing `ans[i]` on an empty `vector<int> ans;`. Give it a size or use `push_back`.
 - Missing `;` in C++, and `=` vs `==` in conditions.
 - Bit width is not capacity: dynamic arrays grow by doubling, not between 2^32 and 2^64.
-
-## Patterns to add next
-
-- Opposite-end two pointers (palindrome, Two Sum II, 3Sum)
-- Sliding window, fixed and variable
-- Frequency map (anagrams, first unique character)
-- Hash map for Two Sum (value to index)
-- Monotonic stack
-- Fast/slow pointers on linked lists
-- Binary search, including on the answer
-- BFS / DFS on grids and trees
 
 ## Template for a new entry
 
