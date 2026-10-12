@@ -6,6 +6,8 @@
 
 **Current subtopic:** 1.2
 
+**Exam-prep mode:** the student's coding exam is in C++ (or Java) and is a few days away, so the roadmap is paused. Day 1 done: C++ refresher (`cpp-refresher.md`), six 1.1 problems redone in C++ (485, 1480, 1295, 1470, 1431, 1672). Redoing 1.2 in C++: 27, 26, 283 done; 88 and 189 remaining. Next: 1.3 String basics in C++, then work through the exam problem sets in C++. Pattern notes live in `patterns.md` (only patterns the student has already solved).
+
 ---
 
 ## 1. Arrays, Strings & Hashing
