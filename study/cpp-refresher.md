@@ -20,6 +20,38 @@ long long big = 1LL * INT_MAX * 2;  // use long long when sums/products can exce
 INT_MAX, INT_MIN                    // from <climits>
 ```
 
+## Bit manipulation
+
+Operators: `&` and, `|` or, `^` xor, `~` not, `<<` shift left, `>>` shift right. Use `uint32_t` (unsigned) for bit puzzles: shifting signed negatives is a trap.
+
+| Do | Code |
+|---|---|
+| test bit i | `(x >> i) & 1` |
+| set bit i | `x \| (1u << i)` |
+| clear bit i | `x & ~(1u << i)` |
+| flip bit i | `x ^ (1u << i)` |
+| count 1 bits | `__builtin_popcount(x)` (`...ll` for `long long`) |
+| count 1 bits by hand | `while (n) { n &= n - 1; count++; }` (each step clears the lowest 1) |
+| power of two? | `x > 0 && (x & (x - 1)) == 0` |
+| low byte / byte k | `x & 0xFF` / `(x >> (8 * k)) & 0xFF` |
+| x * 2^k, x / 2^k (unsigned) | `x << k`, `x >> k` |
+
+```cpp
+// Reverse the 4 bytes (endian swap)
+uint32_t sw = (x >> 24) | ((x >> 8) & 0xFF00u) | ((x << 8) & 0xFF0000u) | (x << 24);
+
+// Reverse all 32 bits (LeetCode 190): shift result left, push in the lowest bit of n
+uint32_t r = 0;
+for (int k = 0; k < 32; k++) { r = (r << 1) | (n & 1); n >>= 1; }
+
+// To hex (LeetCode 405): negatives become unsigned first, then 4 bits per digit
+uint32_t u = (uint32_t)num; string h;
+do { h += "0123456789abcdef"[u & 0xF]; u >>= 4; } while (u);
+reverse(h.begin(), h.end());
+```
+
+Traps: `&` binds looser than `==`, so `x & 1 == 0` means `x & (1 == 0)`; write `(x & 1) == 0`. `1 << 31` overflows `int`, so write `1u << 31` (or `1LL <<`). Shifting by 32 or more on a 32-bit value is undefined.
+
 ## Which one do I want?
 
 | I need... | Use |
