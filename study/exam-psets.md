@@ -4,7 +4,8 @@ Analysis of the four homework problem sets (pset 1 to 4, 23 problems). The exam 
 
 ## Format
 
-- Full programs, not LeetCode-style functions: read from standard input (`cin`), write to standard output (`cout`), graded by an autograder.
+- The homework psets are full programs: read from standard input (`cin`), write to standard output (`cout`), graded by an autograder.
+- The coding exam itself is LeetCode-style (write only the function), so the LeetCode equivalents below are the main practice list.
 - Exact output format matters: spacing, plurals ("1 month" vs "5 months"), brackets, a trailing newline (one problem says no newline).
 - Some inputs: read until end of file, whole lines with spaces, lists like `[1,2,3]`.
 - Note: the PDF text extraction lost superscripts (for example "260" is probably 2^60 and "105" is 10^5). Check the originals for exact limits.
@@ -58,3 +59,42 @@ Analysis of the four homework problem sets (pset 1 to 4, 23 problems). The exam 
 6. Deque and parsing: Archeological Puzzle.
 7. Simulation: Rod Sculpture, Car Value, Job Scheduling, Chasm Crossing, No-Blink.
 8. Hardest: Stack Puzzle, Prime Gap, Perfect Numbers.
+
+## LeetCode equivalents
+
+Closest LeetCode problems for each pset problem. (V) = number, title and difficulty confirmed by web search; the rest are from memory and get checked when we start them.
+
+| Pset problem | LeetCode practice | Notes |
+|---|---|---|
+| Add, Add 2 | 2235 Add Two Integers (E) (V) | The real lesson of Add 2 is `long long` for overflow |
+| Fibonacci (recursive, efficient) | 509 Fibonacci Number (E), 1137 N-th Tribonacci Number (E) | Solve 509 with memoized recursion |
+| Fibonacci 2 | 70 Climbing Stairs (E) | Same recurrence, iterative |
+| Perfect Numbers | 507 Perfect Number (E) | Exact match; divisors up to sqrt(n) |
+| Car Value | none close | Pure simulation; practice from the pset itself |
+| Rod Sculpture | 657 Robot Return to Origin (E), 1041 Robot Bounded In Circle (M), 874 Walking Robot Simulation (M) | Direction state machine |
+| Big- or Little-Endian | 190 Reverse Bits (E), 191 Number of 1 Bits (E) | Shifts and masks |
+| Base Conversion | 504 Base 7 (E), 405 Convert a Number to Hexadecimal (E), 171 Excel Sheet Column Number (E), 168 Excel Sheet Column Title (E) | Both directions of base conversion |
+| No-Blink Contest | 1688 Count of Matches in Tournament (E) (V) | Round-by-round tournament |
+| Prime Pair | 204 Count Primes (M) | Sieve of Eratosthenes |
+| Prime Gap | 2523 Closest Prime Numbers in Range (M) (V) | Same idea for the minimum gap |
+| An Archeological Puzzle | 2810 Faulty Keyboard (E) (V), 641 Design Circular Deque (M) | Reverse-flag-plus-deque trick |
+| Stack Puzzle | 22 Generate Parentheses (M), 946 Validate Stack Sequences (M) | Backtracking over push/pop, and checking one sequence |
+| Job Scheduling | 729 My Calendar I (M) (V), 56 Merge Intervals (M) | Interval overlap |
+| Chasm Crossing | none close; 2073 Time Needed to Buy Tickets (E) (V), 933 Number of Recent Calls (E) | Queue simulation practice |
+| Parsing Brackets | 20 Valid Parentheses (E), 1249 Minimum Remove to Make Valid Parentheses (M) | Stack; 1249 tracks positions |
+| Albert's Dream | 819 Most Common Word (E) | Extract lowercase words |
+| Daily Prize | none close; 1046 Last Stone Weight (E), 703 Kth Largest Element in a Stream (E) | Heap practice; in C++ `multiset` gives min and max |
+| Four-Prime Numbers | 2521 Distinct Prime Factors of Product of Array (M) (V), 204 Count Primes (M) | Sieve plus distinct prime factors |
+| CIMS Printer | 2073 Time Needed to Buy Tickets (E) (V) | Queue simulation |
+| Lucky Draw | 1047 Remove All Adjacent Duplicates In String (E), 1544 Make The String Great (E) | Stack removes adjacent pairs |
+
+## LeetCode practice order for the exam
+
+1. Warm-up: 2235, 509 (memoized), 70, 507.
+2. Stacks and queues: 20, 1047, 1544, 2073, 933, 1249.
+3. Bits and bases: 190, 191, 504, 405, 171, 168.
+4. Primes: 204, 2523, 2521.
+5. Simulation and direction: 657, 1688, 1041, 874.
+6. Containers and strings: 819, 1046, 703, 2810.
+7. Intervals: 56, 729.
+8. Hardest: 22, 946, 641.
