@@ -22,35 +22,97 @@ INT_MAX, INT_MIN                    // from <climits>
 
 ## Bit manipulation
 
-Operators: `&` and, `|` or, `^` xor, `~` not, `<<` shift left, `>>` shift right. Use `uint32_t` (unsigned) for bit puzzles: shifting signed negatives is a trap.
+You already know binary. Two facts are enough to start:
+- Bits are numbered **from the right, starting at 0**. In `1101` (13), bit 0 is the last `1`, bit 1 is `0`, bit 2 is `1`, bit 3 is `1`.
+- Bit tricks work on unsigned numbers, so use `uint32_t` (from `<cstdint>`, already in `bits/stdc++.h`) for puzzles. Negative `int`s shift in surprising ways.
 
-| Do | Code |
-|---|---|
-| test bit i | `(x >> i) & 1` |
-| set bit i | `x \| (1u << i)` |
-| clear bit i | `x & ~(1u << i)` |
-| flip bit i | `x ^ (1u << i)` |
-| count 1 bits | `__builtin_popcount(x)` (`...ll` for `long long`) |
-| count 1 bits by hand | `while (n) { n &= n - 1; count++; }` (each step clears the lowest 1) |
-| power of two? | `x > 0 && (x & (x - 1)) == 0` |
-| low byte / byte k | `x & 0xFF` / `(x >> (8 * k)) & 0xFF` |
-| x * 2^k, x / 2^k (unsigned) | `x << k`, `x >> k` |
+### The six operators, with binary examples
 
 ```cpp
-// Reverse the 4 bytes (endian swap)
-uint32_t sw = (x >> 24) | ((x >> 8) & 0xFF00u) | ((x << 8) & 0xFF0000u) | (x << 24);
+// a & b   1 only where BOTH have a 1       1100 & 1010 = 1000     (12 & 10 = 8)
+// a | b   1 where AT LEAST ONE has a 1     1100 | 1010 = 1110     (12 | 10 = 14)
+// a ^ b   1 where they DIFFER (xor)        1100 ^ 1010 = 0110     (12 ^ 10 = 6)
+// ~a      flips every bit                  ~0101 = ...1010        (use & 0xF to keep 4 bits: (~5u) & 0xF = 10)
+// a << k  slides bits left, fills 0s       0101 << 2 = 10100      (5 << 2 = 20, same as 5 * 4)
+// a >> k  slides bits right, drops the     1101 >> 2 = 0011       (13 >> 2 = 3, same as 13 / 4, rounded down)
+//         lowest k bits
+```
 
-// Reverse all 32 bits (LeetCode 190): shift result left, push in the lowest bit of n
+### Reading and changing one bit
+
+A **mask** is a number with only the bit you care about switched on. `1u << i` is the mask for bit i: `1u << 3` is `1000`.
+
+```cpp
+(x >> i) & 1         // read bit i: slide it to the end, then keep only the last bit
+                     //   x = 1101: i=2 -> (1101 >> 2) & 1 = 11 & 1 = 1;  i=1 -> (110 & 1) = 0
+x & 1                // is x odd? (this is bit 0)       13 & 1 = 1, 12 & 1 = 0
+x | (1u << i)        // set bit i to 1                  1000 | (1u << 0) = 1000 | 0001 = 1001  (8 -> 9)
+x & ~(1u << i)       // clear bit i to 0                1101 & ~(1u << 2) = 1101 & ...1011 = 1001  (13 -> 9)
+x ^ (1u << i)        // flip bit i                      1101 ^ (1u << 0) = 1101 ^ 0001 = 1100  (13 -> 12)
+```
+
+### Counting and checking
+
+```cpp
+__builtin_popcount(x)      // number of 1 bits:  __builtin_popcount(13) = 3   (1101 has three 1s)
+                           // for long long use __builtin_popcountll
+
+n & (n - 1)                // clears the LOWEST 1 bit:  12 (1100) & 11 (1011) = 1000  (8)
+// so this counts the 1 bits by hand (LeetCode 191), once per 1 bit:
+int count = 0;
+while (n) { n &= n - 1; count++; }       // 13: 1101 -> 1100 -> 1000 -> 0, count = 3
+
+// or: look at the last bit, then slide it away
+while (n) { count += n & 1; n >>= 1; }   // 13: 1 + 0 + 1 + 1 = 3
+
+x > 0 && (x & (x - 1)) == 0   // power of two? it has exactly one 1 bit:  8 (1000) yes, 6 (110) no
+```
+
+### Pulling out a chunk
+
+```cpp
+x & 0xFF                   // lowest byte (8 bits):         0x12345678 & 0xFF = 0x78
+(x >> (8 * k)) & 0xFF      // byte number k, from the right: k=1 -> (0x12345678 >> 8) & 0xFF = 0x56
+x & 0xF                    // lowest 4 bits (one hex digit): 0x2B & 0xF = 0xB
+```
+
+### Building a number one bit at a time
+
+To append a bit to the end of a number: shift left to open an empty slot, then `|` the bit in.
+
+```cpp
+result = (result << 1) | bit;
+// append 1, 1, 0 starting from result = 0:
+//   0 -> (0 << 1) | 1 = 1 -> (1 << 1) | 1 = 11 -> (11 << 1) | 0 = 110   (= 6)
+```
+
+### Worked problems
+
+```cpp
+// Reverse all 32 bits (LeetCode 190): peel the last bit off n, append it to r.
+// Loop exactly 32 times (not `while (n)`): trailing 0s of n must become leading 0s of r.
+//   4-bit picture, n = 0011: peel 1, 1, 0, 0 and append each:  r = 1 -> 11 -> 110 -> 1100
 uint32_t r = 0;
 for (int k = 0; k < 32; k++) { r = (r << 1) | (n & 1); n >>= 1; }
 
-// To hex (LeetCode 405): negatives become unsigned first, then 4 bits per digit
+// Swap the 4 bytes (endian swap): move each byte to the opposite end.
+//   0x12345678 -> 0x78563412
+uint32_t sw = (x >> 24) | ((x >> 8) & 0xFF00u) | ((x << 8) & 0xFF0000u) | (x << 24);
+
+// Number to hex (LeetCode 405): take 4 bits at a time with & 0xF, look up the digit.
+// Cast negatives to unsigned first so -1 becomes ffffffff.
 uint32_t u = (uint32_t)num; string h;
 do { h += "0123456789abcdef"[u & 0xF]; u >>= 4; } while (u);
-reverse(h.begin(), h.end());
+reverse(h.begin(), h.end());           // 26 -> "1a",  -1 -> "ffffffff"
 ```
 
-Traps: `&` binds looser than `==`, so `x & 1 == 0` means `x & (1 == 0)`; write `(x & 1) == 0`. `1 << 31` overflows `int`, so write `1u << 31` (or `1LL <<`). Shifting by 32 or more on a 32-bit value is undefined.
+### Traps
+
+- `&` binds looser than `==`: `x & 1 == 0` means `x & (1 == 0)`. Write `(x & 1) == 0`.
+- `1 << 31` overflows `int`. Write `1u << 31` (or `1LL << k` for 64-bit).
+- Shifting by the bit width or more (`x << 32` on a 32-bit value) is undefined.
+- `>>` on a negative `int` keeps filling with 1s, so `while (n) n >>= 1` never ends. Use unsigned.
+- `~x` on an unsigned number flips all 32 bits, not just the ones you were looking at. Mask with `& 0xF` etc. if you want fewer.
 
 ## Which one do I want?
 
