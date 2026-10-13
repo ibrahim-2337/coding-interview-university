@@ -67,11 +67,11 @@ Closest LeetCode problems for each pset problem. (V) = number, title and difficu
 | Pset problem | LeetCode practice | Notes |
 |---|---|---|
 | Add, Add 2 | 2235 Add Two Integers (E) (V) | The real lesson of Add 2 is `long long` for overflow |
-| Fibonacci (recursive, efficient) | 509 Fibonacci Number (E), 1137 N-th Tribonacci Number (E) | Solve 509 with memoized recursion |
-| Fibonacci 2 | 70 Climbing Stairs (E) | Same recurrence, iterative |
-| Perfect Numbers | 507 Perfect Number (E) | Exact match; divisors up to sqrt(n) |
+| Fibonacci (recursive, efficient) | 509 Fibonacci Number (E) (V), 1137 N-th Tribonacci Number (E) (V) | Solve 509 with memoized recursion |
+| Fibonacci 2 | 70 Climbing Stairs (E) (V) | Same recurrence, iterative |
+| Perfect Numbers | 507 Perfect Number (E) (V) | Exact match; divisors up to sqrt(n) |
 | Car Value | none close | Pure simulation; practice from the pset itself |
-| Rod Sculpture | 657 Robot Return to Origin (E), 1041 Robot Bounded In Circle (M), 874 Walking Robot Simulation (M) | Direction state machine |
+| Rod Sculpture | 657 Robot Return to Origin (E) (V), 1041 Robot Bounded In Circle (M) (V), 874 Walking Robot Simulation (M, difficulty not shown by search) | Direction state machine |
 | Big- or Little-Endian | 190 Reverse Bits (E), 191 Number of 1 Bits (E) | Shifts and masks |
 | Base Conversion | 504 Base 7 (E), 405 Convert a Number to Hexadecimal (E), 171 Excel Sheet Column Number (E), 168 Excel Sheet Column Title (E) | Both directions of base conversion |
 | No-Blink Contest | 1688 Count of Matches in Tournament (E) (V) | Round-by-round tournament |
