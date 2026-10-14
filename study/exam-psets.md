@@ -78,7 +78,7 @@ Closest LeetCode problems for each pset problem. (V) = number, title and difficu
 | Prime Pair | 204 Count Primes (M) | Sieve of Eratosthenes |
 | Prime Gap | 2523 Closest Prime Numbers in Range (M) (V) | Same idea for the minimum gap |
 | An Archeological Puzzle | 2810 Faulty Keyboard (E) (V), 641 Design Circular Deque (M) | Reverse-flag-plus-deque trick |
-| Stack Puzzle | 22 Generate Parentheses (M), 946 Validate Stack Sequences (M) | Backtracking over push/pop, and checking one sequence |
+| Stack Puzzle | 22 Generate Parentheses (M), 946 Validate Stack Sequences (M) | 22 is backtracking (like the pset). 946 is NOT backtracking: it checks one given sequence with a greedy stack simulation |
 | Job Scheduling | 729 My Calendar I (M) (V), 56 Merge Intervals (M) | Interval overlap |
 | Chasm Crossing | none close; 2073 Time Needed to Buy Tickets (E) (V), 933 Number of Recent Calls (E) | Queue simulation practice |
 | Parsing Brackets | 20 Valid Parentheses (E), 1249 Minimum Remove to Make Valid Parentheses (M) | Stack; 1249 tracks positions |
