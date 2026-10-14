@@ -207,6 +207,7 @@ Same calls as `unordered_map`, but O(log n) each, and loops go in key order. Ext
 
 | Do | Code | Cost |
 |---|---|---|
+| make | `multiset<int> ms;` / `multiset<int> ms = {3, 1, 3};` | |
 | add | `ms.insert(x);` | O(log n) |
 | how many x | `ms.count(x)` | O(log n + count) |
 | remove ONE copy of x | `ms.erase(ms.find(x));` (check `find` isn't `end()` first) | O(log n) |
